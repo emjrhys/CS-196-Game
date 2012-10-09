@@ -1,0 +1,22 @@
+print "Starting maya loading and fbx conversion \n";
+			
+if (`file -q -exists "C:/Users/Public/DOCUME~1/UNITYP~1/Grifball/Assets/court.mb"`)
+{
+	file -o "C:/Users/Public/DOCUME~1/UNITYP~1/Grifball/Assets/court.mb";
+	FBXExportEmbeddedTextures -v false;
+	// FBXExportHardEdges -v true;
+	FBXExportApplyConstantKeyReducer -v false;
+	FBXExportShowUI -v false;
+
+	print "Before fbx export\n";
+	FBXExport -f "C:/Users/Public/DOCUME~1/UNITYP~1/Grifball/Temp/ExportedFBXFile.fbx";
+	print "after fbx export\n";
+}
+else
+	print "Could not open Maya file.";
+
+system ("del \"C:\\Users\\Public\\DOCUME~1\\UNITYP~1\\Grifball\\Temp\\CommandPipe\"");
+
+$donepipeKill = `fopen "C:/Users/Public/DOCUME~1/UNITYP~1/Grifball/Temp/SyncPipeKill" "w"`;
+fwrite $donepipeKill "Done";
+fclose $donepipeKill;
