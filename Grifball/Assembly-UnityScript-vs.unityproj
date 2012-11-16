@@ -50,9 +50,12 @@
      <Compile Include="Assets\Scripts\GUIColor.js" />
      <Compile Include="Assets\Scripts\GUIUpdate.js" />
      <Compile Include="Assets\Scripts\LookAtPlayer.js" />
+     <Compile Include="Assets\Scripts\Player2Rotate.js" />
      <Compile Include="Assets\Scripts\PlayerMove1P.js" />
+     <Compile Include="Assets\Scripts\PlayerMove2P.js" />
      <Compile Include="Assets\Scripts\RotateTowardsMouse.js" />
      <Compile Include="Assets\Scripts\ScoreController.js" />
+     <Compile Include="Assets\Scripts\WeaponController.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
